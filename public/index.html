@@ -8,19 +8,37 @@
   </head>
   <body class="text-gray-600 font-body">
     <div class="grid md:grid-cols-3">
-      <div class="md:col-span-1">
-        <nav>
-          <div>
-            <h1 class="font-bold uppercase p-4 border-b border-gray-100">
-              <a class="text-sm md:text-lg" href="/">Pankaj's Recipes</a>
+      <div class="md:col-span-1 md:flex md:justify-end">
+        <nav class="text-right w-full">
+          <div
+            class="flex items-center justify-between md:justify-end border-b border-gray-100"
+          >
+            <h1 class="font-bold uppercase p-4">
+              <a class="hover:text-gray-800" href="/">Pankaj's Recipes</a>
             </h1>
+            <div class="px-4 cursor-pointer md:hidden" id="menuToggle">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </div>
           </div>
-          <ul>
-            <li class="text-gray-700 font-bold">
-              <a class="flex items-center" href="#">
+          <ul class="mt-6 hidden md:block" id="menu">
+            <li class="nav-item nav-active">
+              <a class="flex items-center justify-end" href="#">
                 <span>Home</span>
                 <svg
-                  class="w-5 h-5 ml-2"
+                  class="w-5 h-5 mx-2"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -35,11 +53,11 @@
                 </svg>
               </a>
             </li>
-            <li>
-              <a class="flex items-center" href="#">
+            <li class="nav-item">
+              <a class="flex items-center justify-end" href="#">
                 <span>About</span>
                 <svg
-                  class="w-5 h-5 ml-2"
+                  class="w-5 h-5 mx-2"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -54,11 +72,11 @@
                 </svg>
               </a>
             </li>
-            <li>
-              <a class="flex items-center" href="#">
+            <li class="nav-item">
+              <a class="flex items-center justify-end" href="#">
                 <span>Contact</span>
                 <svg
-                  class="w-5 h-5 ml-2"
+                  class="w-5 h-5 mx-2"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -80,8 +98,16 @@
 
       <main class="px-16 py-6 bg-gray-100 md:col-span-2">
         <div class="flex justify-center md:justify-end">
-          <a class="btn btn-primary text-primary" href="#">Log In</a>
-          <a class="btn btn-primary text-primary ml-3" href="#">Sign Up Free</a>
+          <a
+            class="btn btn-primary text-primary transition ease-out duration-500"
+            href="#"
+            >Log In</a
+          >
+          <a
+            class="btn btn-primary text-primary ml-3 transition ease-out duration-500"
+            href="#"
+            >Sign Up Free</a
+          >
         </div>
 
         <header>
@@ -100,7 +126,7 @@
             class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
           >
             <!-- Cards go here -->
-            <div class="card">
+            <div class="card hover:shadow-xl">
               <img
                 class="w-full h-36 sm:h-48 object-cover"
                 src="https://yupitsvegan.com/wp-content/uploads/2020/05/hearty-vegetable-stew-2.jpg"
@@ -131,7 +157,7 @@
               </div>
             </div>
 
-            <div class="card">
+            <div class="card hover:shadow-xl">
               <img
                 class="w-full h-36 sm:h-48 object-cover"
                 src="https://hot-thai-kitchen.com/wp-content/uploads/2021/11/chili-garlic-noodles-blog.jpg"
@@ -160,7 +186,7 @@
               </div>
             </div>
 
-            <div class="card">
+            <div class="card hover:shadow-xl">
               <img
                 class="w-full h-36 sm:h-48 object-cover"
                 src="https://images.media-allrecipes.com/userphotos/8146947.jpg"
@@ -201,7 +227,7 @@
 
           <div class="flex justify-center">
             <div
-              class="btn bg-secondary-200 text-secondary-100 py-1 px-2 text-center"
+              class="btn bg-secondary-200 text-secondary-100 py-1 px-2 text-center hover:shadow-inner transform hover:scale-110 hover:bg-opacity-50 transition ease-in-out duration-300"
             >
               Load more
             </div>
@@ -209,5 +235,6 @@
         </div>
       </main>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
